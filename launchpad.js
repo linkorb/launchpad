@@ -50,7 +50,7 @@
         drawApp: function(app) {
             var h = '<div class="launchpad-app-container"><a href="'+app.link+'"><div class="launchpad-app-icon">';
             h+= '<img src="'+app.icon+'" width="100%"/>';
-            h += '</div></a></div>';
+            h += '</div><div class="launchpad-app-label">'+app.label+'</div></a></div>';
             return h;
         },
         toggle: function () {
@@ -99,12 +99,16 @@
     .launchpad-app-container {\
         display: inline-block;\
         width: 130px;\
-        height: 130px;\
+        height: 150px;\
         margin: 30px;\
     }\
     .launchpad-app-group-header {\
         color: #fff;\
         margin: 10px 0 10px 30px;\
+    }\
+    .launchpad-app-label {\
+        height: 20px;\
+        text-align: center;\
     }\
     .launchpad-app-icon {\
         width: 120px;\
