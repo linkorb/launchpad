@@ -35,7 +35,7 @@
                     html += this.drawApp(this.data[i]);
                 }
             }
-            this.overlay.innerHTML = html;
+            this.overlay.innerHTML = '<div class="launchpad-canvas">'+html+'</div>';
             return this;
         },
         drawAppGroup: function(group) {
@@ -85,11 +85,16 @@
         position: fixed;\
         width: 100%;\
         height: 100%;\
+        overflow-y: auto;\
         top: 0px;\
         left: 0px;\
         text-align: left;\
         opacity: 0;\
         transition: opacity .25s linear;\
+    }\
+    .launchpad-canvas {\
+        width: 100%;\
+        height: auto;\
     }\
     .launchpad-app-container {\
         display: inline-block;\
