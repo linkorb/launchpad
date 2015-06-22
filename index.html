@@ -25,10 +25,83 @@
 
       <p>Mac OSX launchpad style javascript library</p>
 
-      <h3>Examples</h3>
-      <a href="samples/simple.html">Simple</a>
-      <br/>
-      <a href="samples/groups.html">Groups</a>
+      <h2>Installation</h2>
+      Using bower
+      <pre>bower install launchpad</pre>
+
+      <h2>Usage</h2>
+      <h3>Basic usage</h3>
+      <pre>&lt;script&gt;
+      launchpad.setData([
+          {
+              icon:"http://images.apple.com/v/osx/c/images/better-apps/icon_photos_large_2x.png",
+              link: "http://www.apple.com/osx/apps/#numbers",
+              label: "Photos"
+          },
+          {
+              icon:"http://images.apple.com/v/mac/shared/built-in-apps/e/images/numbers_icon_large_2x.png",
+              link: "http://www.apple.com/osx/apps/#numbers",
+              label: "Numbers"
+          }
+          {
+              icon:"http://images.apple.com/v/osx/c/images/better-apps/icon_photos_large_2x.png",
+              link: "http://www.apple.com/osx/photos/",
+              label: "Photos"
+          }
+      ]);
+&lt;/script&gt;
+      </pre>
+      <p><a href="samples/simple.html">Example</a></p>
+
+      <h3>Make app groups</h3>
+      Apps can also be grouped.
+      Simply make a group element in the data array, specifying <i>group</i> (the label of the group) and <i>apps</i> (the apps array).
+      <pre>&lt;script&gt;
+      launchpad.setData([
+          {
+              group: 'Entertainment',
+              apps: [
+                  {
+                      icon:"http://images.apple.com/v/osx/c/images/better-apps/icon_photos_large_2x.png",
+                      link: "http://www.apple.com/osx/apps/#numbers",
+                      label: "Photos"
+                  },
+                  {
+                      icon:"http://images.apple.com/v/mac/shared/built-in-apps/e/images/numbers_icon_large_2x.png",
+                      link: "http://www.apple.com/osx/apps/#numbers",
+                      label: "Numbers"
+                  },
+              ]
+          },
+          {
+              group: 'Work',
+              apps: [
+                  {
+                      icon:"http://images.apple.com/v/mac/shared/built-in-apps/e/images/numbers_icon_large_2x.png",
+                      link: "http://www.apple.com/osx/apps/#numbers",
+                      label: "Numbers"
+                  },
+                  {
+                      icon:"http://images.apple.com/v/mac/shared/built-in-apps/e/images/keynote_icon_large_2x.png",
+                      link: "http://www.apple.com/mac/keynote/",
+                      label: "Keynote"
+                  },
+              ]
+          },
+          {
+              icon:"http://images.apple.com/v/mac/shared/built-in-apps/e/images/numbers_icon_large_2x.png",
+              link: "http://www.apple.com/osx/apps/#numbers",
+              label: "Numbers"
+          },
+          {
+              icon:"http://images.apple.com/v/mac/shared/built-in-apps/e/images/keynote_icon_large_2x.png",
+              link: "http://www.apple.com/mac/keynote/",
+              label: "Keynote"
+          }
+      ]);
+&lt;/script&gt;
+      </pre>
+      <p><a href="samples/groups.html">Example</a></p>
 
       <footer class="site-footer">
         <span class="site-footer-owner">
@@ -37,7 +110,6 @@
       </footer>
 
     </section>
-
 
   </body>
 </html>
