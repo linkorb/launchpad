@@ -1,0 +1,7 @@
+.page-header.buttonbox {
+    padding: 0;
+    text-align: right;
+}
+.page-header.buttonbox a {
+    margin: 10px;
+}
