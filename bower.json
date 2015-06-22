@@ -1,0 +1,24 @@
+{
+  "name": "launchpad",
+  "version": "0.0.1",
+  "homepage": "https://github.com/linkorb/launchpad",
+  "description": "Mac style launchpad javascript library",
+  "main": "launchpad.js",
+  "keywords": [
+    "launchpad",
+    "javascript",
+    "osx",
+    "mac"
+  ],
+  "authors": [
+    "Hongliang"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

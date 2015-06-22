@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Launchpad example</title>
+        <script src="../launchpad.js"></script>
+    </head>
+    <body>
+        <div id="canvas-holder">
+        </div>
+
+        <button type="button" onclick="launchpad.toggle()">Test</button>
+
+        <script>
+
+            launchpad.setData([
+                {
+                    icon:"http://images.apple.com/v/osx/c/images/better-apps/icon_photos_large_2x.png",
+                    link: "http://www.apple.com/osx/apps/#numbers",
+                    label: "Photos"
+                },
+                {
+                    icon:"http://images.apple.com/v/mac/shared/built-in-apps/e/images/numbers_icon_large_2x.png",
+                    link: "http://www.apple.com/osx/apps/#numbers",
+                    label: "Numbers"
+                },
+                {
+                    icon:"http://images.apple.com/v/mac/shared/built-in-apps/e/images/keynote_icon_large_2x.png",
+                    link: "http://www.apple.com/mac/keynote/",
+                    label: "Keynote"
+                },
+                {
+                    icon:"http://images.apple.com/v/osx/c/images/better-apps/icon_photos_large_2x.png",
+                    link: "http://www.apple.com/osx/photos/",
+                    label: "Photos"
+                }
+            ]);
+
+        </script>
+    </body>
+</html>
