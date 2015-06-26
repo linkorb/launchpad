@@ -49,7 +49,11 @@
         },
         drawApp: function(app) {
             var h = '<div class="launchpad-app-container"><a href="'+app.link+'"><div class="launchpad-app-icon">';
-            h+= '<img src="'+app.icon+'" width="100%"/>';
+            if (app.icon.indexOf('http') === 0 || app.icon.indexOf('//') === 0) {
+                h+= '<img src="'+app.icon+'" width="100%"/>';
+            } else {
+                h+=app.icon;
+            }
             h += '</div><div class="launchpad-app-label">'+app.label+'</div></a></div>';
             return h;
         },
@@ -115,9 +119,12 @@
         height: 120px;\
         margin: 5px 0 5px 0;\
         overflow: hidden;\
-        margin-left: auto;\
-        margin-right: auto;\
+        margin: auto;\
         vertical-align: middle;\
+        text-align: center;\
+    }\
+    .launchpad-app-icon .fa {\
+        font-size: 100px;\
     }\
     ');
 

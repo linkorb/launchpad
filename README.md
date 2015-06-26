@@ -32,6 +32,8 @@ For each app, an icon, a link, and a label can be specified.
     ]);
 </script>
 ```
+[Demo](http://linkorb.github.io/launchpad/samples/simple.html "Simple launchpad")
+
 ### Make app groups
 Apps can also be grouped. Simply make a group element in the data array, specifying ```group``` (the label of the group) and ```apps``` (the apps array).
 ```html
@@ -82,3 +84,4 @@ Apps can also be grouped. Simply make a group element in the data array, specify
 
 </script>
 ```
+[Demo](http://linkorb.github.io/launchpad/samples/groups.html "Grouped launchpad")
