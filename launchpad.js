@@ -63,12 +63,22 @@
         toggle: function () {
             if (this.overlay.style.display == 'none') {
                 this.overlay.style.display = '';
-                setTimeout(function(){ launchpad.overlay.style.opacity = 0.7; }, 20);
+                setTimeout(function(){ launchpad.overlay.style.opacity = 1; }, 20);
             } else {
                 this.overlay.style.display = 'none';
                 this.overlay.style.opacity = 0;
             }
+            this.toggleClass(d.body, 'launchpad-active');
             return this;
+        },
+        toggleClass: function (element, className) {
+            var classString = element.className, nameIndex = classString.indexOf(className);
+            if (nameIndex == -1) {
+                classString += ' ' + className;
+            } else {
+                classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
+            }
+            element.className = classString;
         },
         overlayClick: function(event) {
             launchpad.toggle();
@@ -80,7 +90,6 @@
     }
     lp.css.insert('#launchpad_overlay {\
         z-index: 200;\
-        background: #000;\
         position: fixed;\
         width: 100%;\
         height: 100%;\
@@ -90,6 +99,14 @@
         text-align: left;\
         opacity: 0;\
         transition: opacity .25s linear;\
+        background-color: rgba(1, 1, 1, 0.7);\
+    }\
+    .launchpad-active > :not(#launchpad_overlay) {\
+        -webkit-filter: blur(5px);\
+        -moz-filter: blur(5px);\
+        -o-filter: blur(5px);\
+        -ms-filter: blur(5px);\
+        filter: blur(5px);\
     }\
     .launchpad-canvas {\
         width: 100%;\
