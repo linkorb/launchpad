@@ -16,9 +16,12 @@
             }
         },
         init: function() {
-            this.createOverlay().populcateApps();
+            return this.createOverlay().populcateApps();
         },
         createOverlay: function () {
+            if (document.getElementById('launchpad_overlay')) {
+                return this;
+            }
             this.overlay = d.createElement('div');
             this.overlay.id = 'launchpad_overlay';
             this.overlay.style.display = 'none';
@@ -65,16 +68,8 @@
                 this.overlay.style.display = 'none';
                 this.overlay.style.opacity = 0;
             }
+            return this;
         },
-        // toggleClass: function (element, className) {
-        //     var classString = element.className, nameIndex = classString.indexOf(className);
-        //     if (nameIndex == -1) {
-        //         classString += ' ' + className;
-        //     } else {
-        //         classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
-        //     }
-        //     element.className = classString;
-        // },
         overlayClick: function(event) {
             launchpad.toggle();
         },
