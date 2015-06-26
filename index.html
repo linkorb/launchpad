@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/launchpad.css" media="screen">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="launchpad.js"></script>
   </head>
   <body>
     <section class="page-header">
@@ -43,7 +45,12 @@
               icon:"http://images.apple.com/v/mac/shared/built-in-apps/e/images/numbers_icon_large_2x.png",
               link: "http://www.apple.com/osx/apps/#numbers",
               label: "Numbers"
-          }
+          },
+          {
+              icon:"&lt;i class=\"fa fa-leaf\"&gt;&lt;/i&gt;",
+              link: "https://fortawesome.github.io/Font-Awesome/",
+              label: "Font-Awesome"
+          },
           {
               icon:"http://images.apple.com/v/osx/c/images/better-apps/icon_photos_large_2x.png",
               link: "http://www.apple.com/osx/photos/",
@@ -52,7 +59,31 @@
       ]);
 &lt;/script&gt;
       </pre>
-      <p class="page-header buttonbox"><a href="samples/simple.html" class="btn">Demo</a></p>
+      <script>
+          simple = [
+              {
+                  icon:"http://images.apple.com/v/osx/c/images/better-apps/icon_photos_large_2x.png",
+                  link: "http://www.apple.com/osx/apps/#numbers",
+                  label: "Photos"
+              },
+              {
+                  icon:"http://images.apple.com/v/mac/shared/built-in-apps/e/images/numbers_icon_large_2x.png",
+                  link: "http://www.apple.com/osx/apps/#numbers",
+                  label: "Numbers"
+              },
+              {
+                  icon:"<i class=\"fa fa-leaf\"></i>",
+                  link: "https://fortawesome.github.io/Font-Awesome/",
+                  label: "Font-Awesome"
+              },
+              {
+                  icon:"http://images.apple.com/v/osx/c/images/better-apps/icon_photos_large_2x.png",
+                  link: "http://www.apple.com/osx/photos/",
+                  label: "Photos"
+              }
+          ];
+      </script>
+      <p class="page-header buttonbox"><a href="javascript:launchpad.setData(simple).init().toggle();" class="btn">Demo</a></p>
 
       <h3>Make app groups</h3>
       Apps can also be grouped.
@@ -102,7 +133,52 @@
       ]);
 &lt;/script&gt;
       </pre>
-      <p class="page-header buttonbox"><a href="samples/groups.html" class="btn">Demo</a></p>
+      <script>
+          group = [
+              {
+                  group: 'Entertainment',
+                  apps: [
+                      {
+                          icon:"http://images.apple.com/v/osx/c/images/better-apps/icon_photos_large_2x.png",
+                          link: "http://www.apple.com/osx/apps/#numbers",
+                          label: "Photos"
+                      },
+                      {
+                          icon:"http://images.apple.com/v/mac/shared/built-in-apps/e/images/numbers_icon_large_2x.png",
+                          link: "http://www.apple.com/osx/apps/#numbers",
+                          label: "Numbers"
+                      },
+                  ]
+              },
+              {
+                  group: 'Work',
+                  apps: [
+                      {
+                          icon:"http://images.apple.com/v/mac/shared/built-in-apps/e/images/numbers_icon_large_2x.png",
+                          link: "http://www.apple.com/osx/apps/#numbers",
+                          label: "Numbers"
+                      },
+                      {
+                          icon:"http://images.apple.com/v/mac/shared/built-in-apps/e/images/keynote_icon_large_2x.png",
+                          link: "http://www.apple.com/mac/keynote/",
+                          label: "Keynote"
+                      },
+                  ]
+              },
+              {
+                  icon:"http://images.apple.com/v/mac/shared/built-in-apps/e/images/numbers_icon_large_2x.png",
+                  link: "http://www.apple.com/osx/apps/#numbers",
+                  label: "Numbers"
+              },
+              {
+                  icon:"http://images.apple.com/v/mac/shared/built-in-apps/e/images/keynote_icon_large_2x.png",
+                  link: "http://www.apple.com/mac/keynote/",
+                  label: "Keynote"
+              }
+          ];
+      </script>
+      <!-- <p class="page-header buttonbox"><a href="samples/groups.html" class="btn">Demo</a></p> -->
+      <p class="page-header buttonbox"><a href="javascript:launchpad.setData(group).init().toggle();" class="btn">Demo</a></p>
 
       <footer class="site-footer">
         <span class="site-footer-owner">
