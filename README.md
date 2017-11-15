@@ -23,7 +23,7 @@ For each app, an icon, a link, and a label can be specified.
             icon:"http://images.apple.com/v/mac/shared/built-in-apps/e/images/numbers_icon_large_2x.png",
             link: "http://www.apple.com/osx/apps/#numbers",
             label: "Numbers"
-        }
+        },
         {
             icon:"http://images.apple.com/v/osx/c/images/better-apps/icon_photos_large_2x.png",
             link: "http://www.apple.com/osx/photos/",
